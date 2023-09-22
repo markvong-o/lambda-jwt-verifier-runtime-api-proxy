@@ -2,6 +2,10 @@
 const baseUrl = `http://${process.env.AWS_LAMBDA_RUNTIME_API}/2020-01-01/extension`;
 
 class ExtensionController {
+  constructor() {
+    console.info(`[LambdaProxy:ExtensionController:constructor]`);
+  }
+
   async register() {
     const res = await fetch(`${baseUrl}/register`, {
       method: 'post',
