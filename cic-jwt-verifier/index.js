@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const { basename } = require('path');
 const RuntimeApiProxy = require('./runtimeApiProxy');
 const ExtensionController = require('./extensionController');
 
