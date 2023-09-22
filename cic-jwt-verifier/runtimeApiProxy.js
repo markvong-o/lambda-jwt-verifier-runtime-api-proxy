@@ -8,7 +8,7 @@ const RUNTIME_API_ENDPOINT =
   process.env.LRAP_RUNTIME_API_ENDPOINT || process.env.AWS_LAMBDA_RUNTIME_API;
 const RUNTIME_API_URL = `http://${RUNTIME_API_ENDPOINT}/2018-06-01/runtime`;
 
-export class RuntimeApiProxy {
+class RuntimeApiProxy {
   constructor() {
     console.info(`[LambdaProxy:RuntimeApiProxy:constructor]`);
 
@@ -142,3 +142,5 @@ export class RuntimeApiProxy {
     return res.status(resp.status).json(await resp.json());
   }
 }
+
+module.exports = RuntimeApiProxy;

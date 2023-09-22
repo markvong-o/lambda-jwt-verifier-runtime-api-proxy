@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const baseUrl = `http://${process.env.AWS_LAMBDA_RUNTIME_API}/2020-01-01/extension`;
 
-export class ExtensionController {
+class ExtensionController {
   async register() {
     const res = await fetch(`${baseUrl}/register`, {
       method: 'post',
@@ -38,3 +38,5 @@ export class ExtensionController {
     return await res.json();
   }
 }
+
+module.exports = ExtensionController;

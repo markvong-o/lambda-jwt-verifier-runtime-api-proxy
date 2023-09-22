@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const { basename } = require('path');
-import { RuntimeApiProxy } from './runtimeApiProxy';
-import { ExtensionController } from './extensionController';
+const RuntimeApiProxy = require('./runtimeApiProxy');
+const ExtensionController = require('./extensionController').default;
 
 const EventType = {
   INVOKE: 'INVOKE',
