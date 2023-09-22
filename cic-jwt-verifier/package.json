@@ -1,0 +1,17 @@
+{
+  "name": "cic-jwt-verifier",
+  "version": "1.0.0",
+  "description": "Lambda extension to validate bearer token ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Okta",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.0.1",
+    "node-fetch": "^3.3.2"
+  }
+}
