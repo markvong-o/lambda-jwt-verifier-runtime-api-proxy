@@ -6,6 +6,6 @@ set -euo pipefail
 
 OWN_FILENAME="$(basename $0)"
 LAMBDA_EXTENSION_NAME="$OWN_FILENAME" # (external) extension name has to match the filename
-AWS_LRAP_ENABLED=true
-echo "${LAMBDA_EXTENSION_NAME}  launching extension"
+
+echo "[CJV] ${LAMBDA_EXTENSION_NAME} launching extension"
 exec "/opt/${LAMBDA_EXTENSION_NAME}/index.js"
