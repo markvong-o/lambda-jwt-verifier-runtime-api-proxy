@@ -6,8 +6,8 @@ const jwksClient = require('jwks-rsa');
 const RUNTIME_API_ENDPOINT = process.env.CJV_RUNTIME_API_ENDPOINT || process.env.AWS_LAMBDA_RUNTIME_API;
 const LISTENER_PORT = process.env.CJV_LISTENER_PORT || 9125;
 const RUNTIME_API_URL = `http://${RUNTIME_API_ENDPOINT}/2018-06-01/runtime`;
-const JWKS_URI = process.env.CJV_JWKS_URI || 'https://antonal.auth0.com/.well-known/jwks.json';
-const JWT_ISSUER = process.env.CJV_JWT_ISSUER || 'https://antonal.auth0.com/';
+const JWKS_URI = process.env.CJV_JWKS_URI;
+const JWT_ISSUER = process.env.CJV_JWT_ISSUER;
 
 class RuntimeApiProxy {
   async start() {
